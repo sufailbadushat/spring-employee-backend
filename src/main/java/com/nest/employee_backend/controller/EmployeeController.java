@@ -22,4 +22,10 @@ public class EmployeeController {
     public String SearchEmployee(){
         return "Welcome to Search employee page!";
     }
+
+    @GetMapping("viewAall")
+    public String ViewAllEmployee(){
+        return "Welcome to View all employee page!";
+    }
 }
+
