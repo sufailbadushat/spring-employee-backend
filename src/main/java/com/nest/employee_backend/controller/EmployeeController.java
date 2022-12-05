@@ -14,22 +14,18 @@ public class EmployeeController {
     }
 
     @GetMapping("add")
-    public  String AddEmployee(){
-        return "Welcome to add employee page!";
-    }
+    public  String AddEmployee(){ return "Welcome to add employee page!"; }
 
     @GetMapping("search")
-    public String SearchEmployee(){
-        return "Welcome to Search employee page!";
-    }
+    public String SearchEmployee(){ return "Welcome to Search employee page!"; }
 
-    @GetMapping("viewAall")
-    public String ViewAllEmployee(){
-        return "Welcome to View all employee page!";
+    @GetMapping("viewAll")
+    public String ViewAllEmployee(){ return "Welcome to View all employee page!"; }
 
     @GetMapping("edit")
-    public String EditEmployee(){
-        return "Welcome to Edit employee page!";
+    public String EditEmployee() {
+            return "Welcome to Edit employee page!";
+    }
 
     @GetMapping("delete")
     public String DeleteEmployee(){
