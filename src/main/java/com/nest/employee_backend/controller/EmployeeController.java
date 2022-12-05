@@ -23,6 +23,10 @@ public class EmployeeController {
         return "Welcome to Search employee page!";
     }
 
+    @GetMapping("viewAall")
+    public String ViewAllEmployee(){
+        return "Welcome to View all employee page!";
+
     @GetMapping("edit")
     public String EditEmployee(){
         return "Welcome to Edit employee page!";
@@ -33,3 +37,4 @@ public class EmployeeController {
 
     }
 }
+
