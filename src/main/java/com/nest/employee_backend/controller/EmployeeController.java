@@ -26,6 +26,15 @@ public class EmployeeController {
     @GetMapping("viewAall")
     public String ViewAllEmployee(){
         return "Welcome to View all employee page!";
+
+    @GetMapping("edit")
+    public String EditEmployee(){
+        return "Welcome to Edit employee page!";
+
+    @GetMapping("delete")
+    public String DeleteEmployee(){
+        return "Welcome to Delete employee page!";
+
     }
 }
 
