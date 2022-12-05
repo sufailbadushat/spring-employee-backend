@@ -23,8 +23,13 @@ public class EmployeeController {
         return "Welcome to Search employee page!";
     }
 
+    @GetMapping("edit")
+    public String EditEmployee(){
+        return "Welcome to Edit employee page!";
+
     @GetMapping("delete")
     public String DeleteEmployee(){
         return "Welcome to Delete employee page!";
+
     }
 }
