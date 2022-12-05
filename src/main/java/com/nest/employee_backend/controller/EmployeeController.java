@@ -22,4 +22,9 @@ public class EmployeeController {
     public String SearchEmployee(){
         return "Welcome to Search employee page!";
     }
+
+    @GetMapping("delete")
+    public String DeleteEmployee(){
+        return "Welcome to Delete employee page!";
+    }
 }
