@@ -6,6 +6,8 @@ import com.nest.employee_backend.model.Employees;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 
 public class EmployeeController {
@@ -36,11 +38,17 @@ public class EmployeeController {
         return "Employee added successfully!";
     }
 
+    @CrossOrigin(origins = "*")
+    @GetMapping("/viewAll")
+    public List<Employees> ViewAllEmployee()
+    {
+        return (List<Employees>)  employeeDao.findAll();
+    }
+
+
     @PostMapping("search")
     public String SearchEmployee(){ return "Welcome to Search employee page!"; }
 
-    @GetMapping("viewAll")
-    public String ViewAllEmployee(){ return "Welcome to View all employee page!"; }
 
     @PostMapping("edit")
     public String EditEmployee() {
