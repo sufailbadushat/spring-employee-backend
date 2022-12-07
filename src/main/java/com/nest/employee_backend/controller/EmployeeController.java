@@ -46,8 +46,14 @@ public class EmployeeController {
     }
 
 
-    @PostMapping("search")
-    public String SearchEmployee(){ return "Welcome to Search employee page!"; }
+    @CrossOrigin(origins = "*")
+    @PostMapping(path = "/search",produces = "application/json", consumes = "application/json")
+    public List<Employees> SearchEmployee(@RequestBody Employees e)
+    {
+        String empCode= String.valueOf(e.getEmpCode());
+        System.out.println(empCode);
+        return (List<Employees>) employeeDao.SearchEmployee(e.getEmpCode());
+    }
 
 
     @PostMapping("edit")
