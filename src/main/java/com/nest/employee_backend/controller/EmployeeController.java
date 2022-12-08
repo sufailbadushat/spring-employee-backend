@@ -58,16 +58,24 @@ public class EmployeeController {
         return (List<Employees>) employeeDao.SearchEmployee(e.getEmpCode());
     }
 
+    @CrossOrigin(origins = "*")
+    @PostMapping(path = "/delete",produces = "application/json", consumes = "application/json")
+    public Map<String, String> DeleteEmployee(@RequestBody Employees e){
+        String empid = String.valueOf(e.getId());
+        System.out.println(empid);
+        employeeDao.DeleteEmployee(e.getId());
+
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("status","success");
+        return hashMap;
+
+    }
+
 
     @PostMapping("edit")
     public String EditEmployee() {
             return "Welcome to Edit employee page!";
     }
 
-    @PostMapping("delete")
-    public String DeleteEmployee(){
-        return "Welcome to Delete employee page!";
-
-    }
 }
 
